@@ -12,7 +12,7 @@
 
 #define  LOG_TAG    "jniLog"
 
-#define printf(...) __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, __VA_ARGS__);
+#define printf(...) __android_log_print(ANDROID_LOG_WARN, LOG_TAG, __VA_ARGS__);
 
 
 
@@ -27,6 +27,7 @@ extern "C" {
 JNIEXPORT jint JNICALL Java_com_xqs_ndkdemo_JniUtil_add(JNIEnv *env, jclass thiz, jint a, jint b) {
     int c;
     c = a+b;
+    printf("jni result --> %d ",c);
     return c;
 }
 
