@@ -14,7 +14,7 @@ public class MainActivity extends Activity {
 
         mNum = (TextView) findViewById(R.id.tv_num);
 
-        int c = JniUtil.add(10,80);
+        int c = JniUtil.add(10,22);
 
         mNum.setText("c = "+c);
     }
